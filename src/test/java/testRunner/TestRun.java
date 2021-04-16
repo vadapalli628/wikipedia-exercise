@@ -13,6 +13,7 @@ import io.cucumber.junit.CucumberOptions;
 		glue ="stepDefinitions",
 		dryRun =false ,
 		monochrome=	true,
+		tags = "@smoke",
 		plugin ={"pretty","html:report-folder"}
 )
 

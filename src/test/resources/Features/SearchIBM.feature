@@ -5,7 +5,7 @@ Feature: Search on Wiki
 		Given User launch a browser
 		And User opens URL "http://www.wikipedia.org/"
     
-
+  @smoke
   Scenario Outline: Searche a string and validate the same string in Wikipedia
   	
  		Given user search term as "<searchinput>"

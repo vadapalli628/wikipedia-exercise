@@ -7,19 +7,20 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pageObjects.SearchResultsWikiPage;
 import pageObjects.SearchWikiPage;
-import utilities.Base;
 
 public class Steps extends Base {
 	
- 	public WebDriver driver;
+ 	//public WebDriver driver;
 
 	@Given("User launch a browser")
 	public void user_launch_a_browser() {
-		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/driverFiles/chromedriver.exe");
-   		driver = new ChromeDriver();	
    		searchPage = new SearchWikiPage(driver);
    		searchResultsPage = new SearchResultsWikiPage(driver);
    	}
+
+	public Steps() {
+		this.driver = new ChromeDriver();
+	}
 
 	@Given("User opens URL {string}")
 	public void user_opens_url(String url) {
