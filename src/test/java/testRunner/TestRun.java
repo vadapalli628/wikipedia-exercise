@@ -13,12 +13,12 @@ import io.cucumber.junit.CucumberOptions;
 		glue ="stepDefinitions",
 		dryRun =false ,
 		monochrome=	true,
-		tags = "@smoke",
+		tags = "@regression and not @smoke",
 		plugin ={"pretty","html:report-folder"}
 )
 
 public class TestRun {
 	
-	
+
 
 }

@@ -18,8 +18,8 @@ Feature: Search on Wiki
     |searchinput |
     |IBM|
 
-  
-    
+
+  @regression
    Scenario Outline: Search results page is available in other languages
   
     Given user search term as "<searchinput>"
@@ -31,7 +31,8 @@ Feature: Search on Wiki
     Examples: 
     |searchinput |
     |IBM|
-  
+
+    @regression
     Scenario Outline: Search results page in the new language includes a link to the version in English
     
    	Given user search term as "<searchinput>"
